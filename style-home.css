@@ -1,0 +1,327 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    color: black;
+    font-family: "Raleway", sans-serif;
+}
+
+header{
+    position: fixed;
+    width: 100%;
+}
+
+#header{
+    display: flex;
+    justify-content: space-between;
+    background: #445878;
+    height: 70px;
+    align-items: center;
+    padding: 0 80px;
+}
+
+header ul{
+    display: flex;
+}
+
+header ul li{
+    margin: 30px;
+}
+
+header ul li a{
+    transition: 0.3s;
+    color: white;
+}
+
+header ul li a:hover{
+    transition: 0.3s;
+    color: yellow;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+#logo{
+    width: 120px;
+    height: 50px;
+}
+
+/* ------------------------------------------------------ */
+
+#divisao1{
+    background: #F5F6FA;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#divisao1 .left{
+    width: 800px;
+    padding: 150px 200px;
+}
+
+#divisao1 .left .border{
+    border: 2px solid yellow;
+    width: 50px;
+}
+
+#divisao1 .left h5{
+    color: gray;
+    font-weight: 200;
+    line-height: 20px;
+    font-size: 1.1em;
+}
+
+/* --------------------------------------------------- */
+
+#divisao2{
+    background: #F5F6FA;
+    height: 300px;
+    margin-top: -4px;
+}
+
+#divisao2 .super{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 80px;
+}
+
+#divisao2 .text{
+    width: 400px;
+    padding: 100px 0;
+}
+
+/* ------------------------------------------- */
+
+#divisao3{
+    background: #445878;
+    text-align: center;
+    height: 100px;
+    margin-top: -4px;
+}
+
+#divisao3 .price p{
+    display: inline-flex;
+    margin-right: 100px;
+    color: white;
+    font-size: 1.2em;
+}
+
+/* ---------------------------------------------- */
+
+#divisao4 .text{
+    width: 700px;
+    text-align: center;
+    margin: 40px auto 70px auto;
+}
+
+#divisao4 .square1{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 120px;
+}
+
+#divisao4 .square2{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 120px 50px 120px;
+}
+
+#divisao4 .square1 .card .card-text{
+    background: #40506A;
+    margin-top: -4px;
+    height: 50px;
+    text-align: center;
+}
+
+#divisao4 .square1 .card .card-text p{
+    color: white;
+    padding-top: 15px;
+}
+
+#divisao4 .square2 .card .card-text{
+    background: #40506A;
+    margin-top: -4px;
+    height: 50px;
+    text-align: center;
+}
+
+#divisao4 .square2 .card .card-text p{
+    color: white;
+    padding-top: 15px;
+}
+
+/* --------------------------------------------- */
+
+#divisao5{
+    display: flex;
+    justify-content: space-between;
+    background: #F8F4FC;
+}
+
+#divisao5 .left{
+    width: 500px;
+    margin: 80px auto;
+}
+
+#divisao5 .left .border1{
+    height: 2px;
+    margin-top: 4px;
+    background: yellow;
+    width: 90%;
+}
+
+#divisao5 .left .border2{
+    height: 2px;
+    margin-top: 4px;
+    background: yellow;
+    width: 65%;
+}
+
+#divisao5 .left .border3{
+    height: 2px;
+    margin-top: 4px;
+    background: yellow;
+    width: 100%;
+}
+
+#divisao5 .left .border4{
+    height: 2px;
+    margin-top: 4px;
+    background: yellow;
+    width: 78%;
+}
+
+/* -------------------------------------------- */
+
+#divisao6{
+    background: #9FB0C2;
+    display: flex;
+    justify-content: space-between;
+    margin-top: -4px;
+}
+
+#divisao6 .right{
+    width: 400px;
+    margin: 150px 160px 0 0;
+}
+
+#divisao6 .right p{
+    color: white;
+}
+
+#divisao6 .right h2{
+    margin: 6px 0;
+    color: white;
+}
+
+/* -------------------------------------------- */
+
+#divisao7{
+    background: #445878;
+    text-align: center;
+    height: 100px;
+    margin-top: -4px;
+}
+
+#divisao7 .price p{
+    display: inline-flex;
+    margin-right: 100px;
+    color: white;
+    font-size: 1.2em;
+}
+
+/* -------------------------------------------- */
+
+#divisao8{
+    width: 100%;
+    background: #F5F6FA;
+}
+
+.contact {
+    width: 60%;
+    padding: 30px 0 30px 150px;
+}
+.contact h2 {
+    text-align: left;
+    margin-bottom: 20px;
+    font-size: 1.8em;
+}
+
+.form-group {
+    display: flex;
+    gap: 150px;
+    margin-bottom: 15px;
+}
+
+.form-group input {
+    width: 170%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+}
+
+.form-group input:hover{
+    outline: none;
+}
+
+.form-group label {
+    font-size: 12px;
+    color: #888;
+    display: block;
+}
+
+.textarea-group {
+    display: flex;
+    flex-direction: column;
+}
+
+textarea {
+    width: 80%;
+    min-height: 150px;
+    max-height: 300px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: vertical;
+    outline: none;
+    margin-top: 8px;
+}
+
+textarea:hover{
+    outline: none;
+}
+
+.contact button {
+    width: 35%;
+    padding: 10px;
+    height: 60px;
+    background: #F6E867;
+    color: #0056b3;
+    border: 1px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 900;
+    margin: 18px 0;
+}
+.contact button:hover {
+    background-color: #445878;
+    color: white;
+}
+
+footer{
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 120px;
+    background: #445878;
+}
+
+footer p{
+    margin-top: 15px;
+    color: #8F96A6;
+}
