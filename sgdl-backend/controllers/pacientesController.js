@@ -1,6 +1,5 @@
 const db = require('../config/db');
 const bcrypt = require('bcrypt');
-const jwt = require('jsonwebtoken');
 
 // Função para registrar ações no histórico
 const registrarAcao = (usuario_id, tipo_usuario, acao) => {
@@ -71,28 +70,28 @@ const deletarPaciente = (req, res) => {
 };
 
 // Login de paciente
-const loginPaciente = (req, res) => {
-    const { email, senha } = req.body;
-    db.query('SELECT * FROM pacientes WHERE email = ?', [email], (err, results) => {
-        if (err) return res.status(500).json(err);
-        if (results.length === 0) return res.status(404).json({ message: 'Paciente não encontrado' });
-        const paciente = results[0];
+//const loginPaciente = (req, res) => {
+ //   const { email, senha } = req.body;
+//    db.query('SELECT * FROM pacientes WHERE email = ?', [email], (err, results) => {
+//        if (err) return res.status(500).json(err);
+//        if (results.length === 0) return res.status(404).json({ message: 'Paciente não encontrado' });
+//        const paciente = results[0];
 
         // Verificar a senha
-        if (!bcrypt.compareSync(senha, paciente.senha)) {
-            return res.status(401).json({ message: 'Senha incorreta' });
-        }
+//        if (!bcrypt.compareSync(senha, paciente.senha)) {
+  //          return res.status(401).json({ message: 'Senha incorreta' });
+    //    }
 
         // Gerar o token
-        const token = jwt.sign({ id: paciente.id, type: 'Paciente' }, process.env.JWT_SECRET, {
+ //       const token = jwt.sign({ id: paciente.id, type: 'Paciente' }, process.env.JWT_SECRET, {
             expiresIn: '1h', // O token expira em 1 hora
-        });
-        res.json({ token });
+  //      });
+   //     res.json({ token });
 
         // Registrar a ação de login
-        registrarAcao(paciente.id, 'Paciente', `Realizou login`);
-    });
-};
+     //   registrarAcao(paciente.id, 'Paciente', `Realizou login`);
+   // });
+//};
 
 console.log("Funções disponíveis:", {
     criarPaciente,

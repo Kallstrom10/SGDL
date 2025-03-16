@@ -1,6 +1,5 @@
 const db = require('../config/db');
 const bcrypt = require('bcrypt');
-const jwt = require('jsonwebtoken');
 
 // Função para registrar ações no histórico
 const registrarAcao = (usuario_id, tipo_usuario, acao) => {
@@ -91,12 +90,6 @@ const loginAnalista = (req, res) => {
         if (!bcrypt.compareSync(senha, analista.senha)) {
             return res.status(401).json({ message: 'Senha incorreta' });
         }
-
-        // Gerar o token
-        const token = jwt.sign({ id: analista.id, type: 'Analista' }, process.env.JWT_SECRET, {
-            expiresIn: '1h', // O token expira em 1 hora
-        });
-        res.json({ token });
     });
 };
 
